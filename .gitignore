@@ -1,0 +1,3 @@
+waterdemo/static/bower_components/*
+*.pyc
+*.pyo
