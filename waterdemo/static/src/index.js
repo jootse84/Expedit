@@ -59,4 +59,10 @@ map.on('load', function () {
   });
 });
 
-
+$(".btn-circle").click(function (event) {
+  $(".btn-primary").removeAttr("disabled")
+  $(".btn-primary").attr("class", "btn btn-default btn-circle")
+  let year = $(this).data("year")
+  $(this).attr("disabled", "disabled")
+  $(this).attr("class", "btn btn-primary btn-circle")
+})

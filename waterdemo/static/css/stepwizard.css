@@ -49,9 +49,15 @@ body{margin:40px;}
   font-size: 12px;
   line-height: 1.428571429;
   border-radius: 15px;
+  -webkit-transition: all 0.35s ease-in-out;
+  -o-transition: all 0.35s ease-in-out;
+  transition: all 0.35s ease-in-out;
 }
 
 .btn-primary.btn-circle {
   width: 30px;
   height: 30px;
+  -webkit-transition: all 0.35s ease-in-out;
+  -o-transition: all 0.35s ease-in-out;
+  transition: all 0.35s ease-in-out;
 }
