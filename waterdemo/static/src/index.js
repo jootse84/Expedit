@@ -3,8 +3,8 @@ mapboxgl.accessToken = 'pk.eyJ1Ijoiam9vdHNlODQiLCJhIjoiY2lrandjOTFyMDh5bHUybTZsM
 var map = new mapboxgl.Map({
     container: 'map',
     style: 'mapbox://styles/mapbox/dark-v9',
-    zoom: 5,
-    center: [-118.825026, 37.452485]
+    zoom: 4.5,
+    center: [-123.221680, 38.400480]
 });
 
 var layerList = document.getElementById('menu');
@@ -19,7 +19,7 @@ for (var i = 0; i < inputs.length; i++) {
     //inputs[i].onclick = switchLayer;
 }
 
-const colors = ['#088', '#880', '#008', '#808']
+const colors = ['#088', '#880', '#008', '#808', '#044', '#440', '#004', '#404']
 
 map.on('load', function () {
   $.getJSON("../static/json/jsoncounties-CA.min.json", function (json) {
@@ -52,33 +52,11 @@ map.on('load', function () {
           'layout': {},
           'paint': {
               'fill-color': rand,
-              'fill-opacity': 0.7
+              'fill-opacity': 0.6
           }
       });
     }
   });
-
-    /*
-    map.addSource('alabama', {
-        'type': 'geojson',
-        'data': {
-            'type': 'Feature',
-            'geometry': {
-                'type': 'Polygon',
-                'coordinates': 
-            }
-        }
-    });
-
-    map.addLayer({
-        'id': 'alabama',
-        'type': 'fill',
-        'source': 'alabama',
-        'layout': {},
-        'paint': {
-            'fill-color': '#088',
-            'fill-opacity': 0.8
-        }
-    });
-    */
 });
+
+
